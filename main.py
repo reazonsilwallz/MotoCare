@@ -30,6 +30,8 @@ st.write("3. Service reminders")
 st.write("4. View analytics")
 
 
+st.image("assets/veneno.jpg")
+
 
 
 
