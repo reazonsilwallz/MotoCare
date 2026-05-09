@@ -1,27 +1,30 @@
 import streamlit as st
 import pandas as pd
+import json
+import os
+from datetime import date, datetime
+import uuid
+import altair as alt
 
+# Constants
+DATA_FILE = 'motocare_data.json'
 
-# Set page configuration such as title, icon and layout
-st.set_page_config(page_title="MotoCare", page_icon="assets/logo.png", layout="wide", initial_sidebar_state="expanded"  )
+CATEGORIES =[
+    'Oil Change', 'Tire Services', 'Brake Services', 'Battery Services', 'Engine Tune-Up', 'Others',
+]
 
-#title of the app
-st.title("MotoCare: Your Ultimate Car Maintenance Companion")
-page= st.sidebar.radio("Navigate", ["Home", "Car Selection","Cost","Health","Alerts","Contact Us"])
+def load_data():
+    if os.path.exists(DATA_FILE):
+        with open(DATA_FILE, 'r') as f:
+            return json.load(f)
+    return {"vehicles": {}, "services": {}}
 
+def save_data(data):
+    with open(DATA_FILE, 'w') as f:
+        json.dump(data, f, indent=2, default=str)
 
-if page == "Home":
-    st.title("Home")
+def init_state():
+    if 'data' not in st.session_state:
+        st.session_state.data = load_data()
 
-elif page == "Car Selection":
-    st.title("Car Selection")
-
-elif page == "Cost":
-    st.title("Cost")    
-
-elif page == "Health":
-    st.title("Health")
-
-elif page == "Alerts":
-    st.title("Alerts")
-
+init_state()
