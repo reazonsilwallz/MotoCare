@@ -7,28 +7,32 @@ import uuid
 import altair as alt
 
 # Constants
-DATA_FILE = 'motocare_data.json'
+DATA_FILE = 'motocare_data.json' # local storage file
 
 CATEGORIES =[
     'Oil Change', 'Tire Services', 'Brake Services', 'Battery Services', 'Engine Tune-Up', 'Others',
 ]
 
+# Data FUnctions
 def load_data():
     if os.path.exists(DATA_FILE):
         with open(DATA_FILE, 'r') as f:
             return json.load(f)
-    return {"vehicles": {}, "services": {}}
+    return {"vehicles": {}, "records": []}
 
 def save_data(data):
+    # overwrite the entire file with updated data
     with open(DATA_FILE, 'w') as f:
         json.dump(data, f, indent=2, default=str)
 
 def init_state():
+    # Load data into session state once — persists across reruns
     if 'data' not in st.session_state:
         st.session_state.data = load_data()
 
 init_state()
 
+# Helper functions
 def get_vehicles():
     return st.session_state.data["vehicles"]
 
@@ -43,6 +47,7 @@ def get_records(vehicle_id=None):
 def records_df(vehicle_id=None):
     recs = get_records(vehicle_id)
     if not recs:
+        # Return empty DataFrame with correct columns if no records
         return pd.DataFrame(columns=["id", "vehicle_id", "date", "category",
                                      "description", "cost", "mileage"])
     df = pd.DataFrame(recs)
@@ -50,13 +55,3 @@ def records_df(vehicle_id=None):
     df["cost"] = df["cost"].astype(float)
     return df.sort_values("date", ascending=False)
 
-## test code
-if __name__ == "__main__":
-    data = load_data()
-    print(data)  
-
-    data["vehicles"]["test-id"] = {"make": "Toyota", "model": "Camry"}
-    save_data(data)
-
-    reloaded = load_data()
-    print(reloaded)  
