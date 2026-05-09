@@ -28,3 +28,24 @@ def init_state():
         st.session_state.data = load_data()
 
 init_state()
+
+def get_vehicles():
+    return st.session_state.data["vehicles"]
+
+
+def get_records(vehicle_id=None):
+    recs = st.session_state.data["records"]
+    if vehicle_id:
+        recs = [r for r in recs if r["vehicle_id"] == vehicle_id]
+    return recs
+
+
+def records_df(vehicle_id=None):
+    recs = get_records(vehicle_id)
+    if not recs:
+        return pd.DataFrame(columns=["id", "vehicle_id", "date", "category",
+                                     "description", "cost", "mileage"])
+    df = pd.DataFrame(recs)
+    df["date"] = pd.to_datetime(df["date"])
+    df["cost"] = df["cost"].astype(float)
+    return df.sort_values("date", ascending=False)
