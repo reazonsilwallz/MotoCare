@@ -5,6 +5,7 @@ import os
 from datetime import date, datetime
 import uuid
 import altair as alt
+from PIL import Image
 
 # Constants
 DATA_FILE = 'motocare_data.json' # local storage file
@@ -54,4 +55,13 @@ def records_df(vehicle_id=None):
     df["date"] = pd.to_datetime(df["date"])
     df["cost"] = df["cost"].astype(float)
     return df.sort_values("date", ascending=False)
+
+
+# Page Configuration
+st.set_page_config(
+    page_title="MotoCare - Motorcycle Maintenance Tracker",
+    page_icon="",
+    layout="wide",
+    initial_sidebar_state="expanded",
+)
 
