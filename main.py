@@ -49,3 +49,14 @@ def records_df(vehicle_id=None):
     df["date"] = pd.to_datetime(df["date"])
     df["cost"] = df["cost"].astype(float)
     return df.sort_values("date", ascending=False)
+
+## test code
+if __name__ == "__main__":
+    data = load_data()
+    print(data)  
+
+    data["vehicles"]["test-id"] = {"make": "Toyota", "model": "Camry"}
+    save_data(data)
+
+    reloaded = load_data()
+    print(reloaded)  

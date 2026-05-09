@@ -1,0 +1,9 @@
+{
+  "vehicles": {
+    "test-id": {
+      "make": "Toyota",
+      "model": "Camry"
+    }
+  },
+  "services": {}
+}
