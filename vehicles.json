@@ -1,0 +1,17 @@
+
+[
+    {
+        "make": "Lamborghini",
+        "model": "Veneno",
+        "year": 2014,
+        "image": "assets/veneno.jpg",
+        "description": "The Lamborghini Veneno is a limited edition supercar that combines extreme performance with cutting-edge design. With a powerful V12 engine, it delivers breathtaking speed and acceleration, while its aggressive styling and aerodynamic features make it a true masterpiece on wheels."  
+    },
+    {
+        "make": "Honda",
+        "model": "CBR600RR",
+        "year": 2013,
+        "image": "assets/cbr600rr.jpg",
+        "description": "The Honda CBR600RR is a high-performance sport bike that delivers exceptional power and handling. With its lightweight frame and powerful engine, it provides an exhilarating riding experience for enthusiasts."
+    }
+]
