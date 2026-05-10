@@ -71,6 +71,16 @@
       "cost": 310.0,
       "mileage": 10000,
       "created_at": "2026-05-10 01:18:10.715145"
+    },
+    {
+      "id": "2a7a54bc-42eb-4a5a-be72-2e01c1ba692b",
+      "vehicle_id": "07251271-b208-4dd1-8bef-794cc97ccd92",
+      "date": "2024-07-22",
+      "category": "Brake Services",
+      "description": "Rear brake pads replaced, rear caliper cleaned and lubricated",
+      "cost": 140.0,
+      "mileage": 12500,
+      "created_at": "2026-05-10 01:19:14.853672"
     }
   ]
 }
