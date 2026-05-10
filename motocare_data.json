@@ -9,6 +9,16 @@
       "mileage": 0,
       "color": "Midnight Black",
       "created_at": "2026-05-10 01:08:04.079038"
+    },
+    "869e1b16-c9ac-49f6-b8cf-7b0937a09666": {
+      "year": 2020,
+      "make": "Honda",
+      "model": "Civic",
+      "plate": "HND-2020",
+      "vin": "2HGFC2F59LH123456",
+      "mileage": 0,
+      "color": "Lunar Silver",
+      "created_at": "2026-05-10 19:18:28.763344"
     }
   },
   "records": [
@@ -111,6 +121,56 @@
       "cost": 220.0,
       "mileage": 18500,
       "created_at": "2026-05-10 01:21:57.708959"
+    },
+    {
+      "id": "913e06ff-a041-437a-bc57-f5beb3007d9d",
+      "vehicle_id": "869e1b16-c9ac-49f6-b8cf-7b0937a09666",
+      "date": "2024-01-08",
+      "category": "Oil Change",
+      "description": "Full synthetic oil change 0W-20, oil filter replaced",
+      "cost": 60.0,
+      "mileage": 8000,
+      "created_at": "2026-05-10 19:19:33.377135"
+    },
+    {
+      "id": "d1512aff-2bfa-4d1b-9c4e-1cd212c11434",
+      "vehicle_id": "869e1b16-c9ac-49f6-b8cf-7b0937a09666",
+      "date": "2024-02-12",
+      "category": "Tire Services",
+      "description": "Rotated all four tires, wheel alignment adjusted",
+      "cost": 90.0,
+      "mileage": 11000,
+      "created_at": "2026-05-10 19:20:05.649910"
+    },
+    {
+      "id": "75ca7114-2420-41f8-89f5-c4718474c959",
+      "vehicle_id": "869e1b16-c9ac-49f6-b8cf-7b0937a09666",
+      "date": "2024-03-18",
+      "category": "Brake Services",
+      "description": "Front brake pads replaced, brake fluid flushed",
+      "cost": 210.0,
+      "mileage": 14000,
+      "created_at": "2026-05-10 19:20:39.735670"
+    },
+    {
+      "id": "62f30e7c-54ac-4162-8204-ef7184fa4200",
+      "vehicle_id": "869e1b16-c9ac-49f6-b8cf-7b0937a09666",
+      "date": "2024-04-22",
+      "category": "Battery Services",
+      "description": " Battery load tested and replaced with Optima YellowTop",
+      "cost": 160.0,
+      "mileage": 17000,
+      "created_at": "2026-05-10 19:21:05.191895"
+    },
+    {
+      "id": "c25644e6-0cd5-40f4-be2c-90230c29614a",
+      "vehicle_id": "869e1b16-c9ac-49f6-b8cf-7b0937a09666",
+      "date": "2024-05-15",
+      "category": "Oil Change",
+      "description": "Full synthetic oil change 0W-20, cabin air filter replaced",
+      "cost": 65.0,
+      "mileage": 21000,
+      "created_at": "2026-05-10 19:21:31.752170"
     }
   ]
 }
