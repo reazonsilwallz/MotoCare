@@ -127,6 +127,17 @@ def show():
         )
         st.altair_chart(pie, use_container_width=True)
 
+    # recent service table
+    st.markdown("---")
+    st.subheader("Recent Services")
+
+    disp = df.head(6)[["date", "category", "description", "cost", "mileage"]].copy()
+    disp["date"] = disp["date"].dt.strftime("%d %b %Y")
+    disp["cost"] = disp["cost"].map("${:,.2f}".format)
+    st.dataframe(disp, use_container_width=True, hide_index=True)
+
+    st.markdown("---")
+    
     # row 2 - Monthly Bar + Cost per Service Dot
     col3, = st.columns(1)
 
@@ -154,11 +165,3 @@ def show():
         st.altair_chart(bar, use_container_width=True)
 
 
-    # recent service table
-    st.markdown("---")
-    st.subheader("Recent Services")
-
-    disp = df.head(6)[["date", "category", "description", "cost", "mileage"]].copy()
-    disp["date"] = disp["date"].dt.strftime("%d %b %Y")
-    disp["cost"] = disp["cost"].map("${:,.2f}".format)
-    st.dataframe(disp, use_container_width=True, hide_index=True)
