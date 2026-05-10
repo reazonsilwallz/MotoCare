@@ -21,7 +21,7 @@ H_LG  = 320
 
 
 def show():
-    st.title("📊 Cost Comparison")
+    st.title(" Cost Comparison")
     st.markdown("---")
 
     vehicles = get_vehicles()
