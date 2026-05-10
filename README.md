@@ -67,7 +67,7 @@ pages_/
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/yourusername/motocare.git
+git clone https://github.com/reazonsilwallz/MotoCare.git
 cd motocare
 ```
 
