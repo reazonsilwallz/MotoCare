@@ -113,25 +113,26 @@ vehicle_names = {
 }
 
 # Page Routes
+from pages_ import dashboard
 from pages_ import select_vehicle
 
 if page == "Dashboard":
-    pass  # Phase 5
+    dashboard.show()
 
 elif page == "Select a Vehicle":
     select_vehicle.show()
 
 elif page == "Cost Comparison":
-    pass  # Phase 6
+    pass  
 
 elif page == "Cost Estimator":
-    pass  # Phase 7
+    pass  
 
 elif page == "Edit & Delete Records":
-    pass  # Phase 8
+    pass 
 
 elif page == "About Us":
-    pass  # Phase 9
+    pass  
 
 
 
