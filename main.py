@@ -117,6 +117,7 @@ from pages_ import dashboard
 from pages_ import select_vehicle
 from pages_ import cost_comparison
 from pages_ import edit_delete
+from pages_ import about
 
 if page == "Dashboard":
     dashboard.show()
@@ -131,7 +132,7 @@ elif page == "Edit & Delete Records":
     edit_delete.show()
 
 elif page == "About Us":
-    pass  
+    about.show()
 
 
 
