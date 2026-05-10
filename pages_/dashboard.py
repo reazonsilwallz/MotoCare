@@ -128,7 +128,7 @@ def show():
         st.altair_chart(pie, use_container_width=True)
 
     # row 2 - Monthly Bar + Cost per Service Dot
-    col3, col4 = st.columns(2)
+    col3, = st.columns(1)
 
     with col3:
         st.subheader("Monthly Spend")
@@ -153,29 +153,6 @@ def show():
         )
         st.altair_chart(bar, use_container_width=True)
 
-    with col4:
-        st.subheader("Cost per Service")
-
-        svc = df.sort_values("date").copy()
-        svc["date_str"] = svc["date"].dt.strftime("%d %b %y")
-
-        dot = alt.Chart(svc).mark_circle(size=60).encode(
-            x=alt.X("date_str:O", axis=alt.Axis(labelAngle=-30), title="Date"),
-            y=alt.Y("cost:Q", axis=alt.Axis(format="$,.0f"), title="Cost"),
-            color=alt.Color("category:N",
-                            scale=alt.Scale(range=PALETTE),
-                            legend=alt.Legend(orient="bottom")),
-            tooltip=["date_str", "category",
-                     alt.Tooltip("cost:Q", format="$,.2f")]
-        ).properties(height=H_SM).configure_view(
-            strokeWidth=0, fill=CARD_BG
-        ).configure_axis(
-            gridColor=GRID_CLR, labelColor=TEXT_CLR, titleColor=TEXT_CLR
-        ).configure_legend(
-            labelColor=TEXT_CLR, titleColor=TEXT_CLR,
-            fillColor=CARD_BG, strokeColor=GRID_CLR
-        )
-        st.altair_chart(dot, use_container_width=True)
 
     # recent service table
     st.markdown("---")
