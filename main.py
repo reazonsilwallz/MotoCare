@@ -71,6 +71,7 @@ st.set_page_config(
 # Sidebar Navigation
 st.sidebar.image("assets/logo.png", use_container_width=True)
 st.sidebar.title("MotoCare")
+st.sidebar.markdown("Drive -- Maintain -- Thrive")
 st.sidebar.markdown("---")
 
 page = st.sidebar.radio(
@@ -79,7 +80,6 @@ page = st.sidebar.radio(
         "Dashboard",
         "Select a Vehicle",
         "Cost Comparison",
-        "Cost Estimator",
         "Edit & Delete Records",
         "About Us",
     ],
