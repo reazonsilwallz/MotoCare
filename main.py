@@ -113,7 +113,7 @@ vehicle_names = {
 }
 
 # Page Routes
-from pages import dashboard, select_vehicle, cost_comparison, edit_delete, about
+from pages_ import dashboard, select_vehicle, cost_comparison, edit_delete, about
 
 if page == "Dashboard":
     dashboard.show()
