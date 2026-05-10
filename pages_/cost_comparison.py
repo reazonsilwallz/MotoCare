@@ -59,3 +59,41 @@ def show():
     k3.metric("Most Expensive Vehicle", most_expensive)
 
     st.markdown("---")
+
+#Row 1 - Total Cost Bar + Cost Share Pie
+    col1, col2 = st.columns([3, 2])
+
+    with col1:
+        st.subheader("Total Cost per Vehicle")
+
+        bar = alt.Chart(summary_df).mark_bar(
+            color=ACCENT,
+            cornerRadiusTopRight=3,
+            cornerRadiusBottomRight=3
+        ).encode(
+            x=alt.X("Total Cost:Q", axis=alt.Axis(format="$,.0f")),
+            y=alt.Y("Vehicle:N",    sort="-x"),
+            tooltip=["Vehicle", alt.Tooltip("Total Cost:Q", format="$,.2f")]
+        ).properties(height=H_MED).configure_view(
+            strokeWidth=0, fill=CARD_BG
+        ).configure_axis(
+            gridColor=GRID_CLR, labelColor=TEXT_CLR, titleColor=TEXT_CLR
+        )
+        st.altair_chart(bar, use_container_width=True)
+
+    with col2:
+        st.subheader("Fleet Cost Share")
+
+        pie = alt.Chart(summary_df).mark_arc(innerRadius=50).encode(
+            theta=alt.Theta("Total Cost:Q"),
+            color=alt.Color("Vehicle:N",
+                            scale=alt.Scale(range=PALETTE),
+                            legend=alt.Legend(orient="bottom")),
+            tooltip=["Vehicle", alt.Tooltip("Total Cost:Q", format="$,.2f")]
+        ).properties(height=H_MED).configure_view(
+            strokeWidth=0, fill=CARD_BG
+        ).configure_legend(
+            labelColor=TEXT_CLR, titleColor=TEXT_CLR,
+            fillColor=CARD_BG, strokeColor=GRID_CLR
+        )
+        st.altair_chart(pie, use_container_width=True)
