@@ -41,6 +41,16 @@
       "cost": 165.0,
       "mileage": 4500,
       "created_at": "2026-05-10 01:11:46.969720"
+    },
+    {
+      "id": "a984b65e-0771-4810-800e-224825aa1589",
+      "vehicle_id": "07251271-b208-4dd1-8bef-794cc97ccd92",
+      "date": "2024-05-20",
+      "category": "Oil Change",
+      "description": "Second oil change, Yamalube 10W-40, spark plugs replaced NGK CR9EK\n",
+      "cost": 90.0,
+      "mileage": 8000,
+      "created_at": "2026-05-10 01:13:19.796319"
     }
   ]
 }
