@@ -56,6 +56,7 @@ def records_df(vehicle_id=None):
     df["cost"] = df["cost"].astype(float)
     return df.sort_values("date", ascending=False)
 
+
 icon = Image.open("assets/logo.png")
 
 # Page Configuration
@@ -65,4 +66,48 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="expanded",
 )
+
+
+# Sidebar Navigation
+st.sidebar.title("MotoCare")
+st.sidebar.markdown("---")
+
+page = st.sidebar.radio(
+    "Navigation",
+    [
+        "Dashboard",
+        "Select a Vehicle",
+        "Cost Comparison",
+        "Cost Estimator",
+        "Edit & Delete Records",
+        "About Us",
+    ],
+    label_visibility="collapsed",
+)
+
+st.sidebar.markdown("---")
+st.sidebar.caption("v1.0.0 · MIT License")
+
+# Chart theme and colors
+CARD_BG  = "#111111"
+GRID_CLR = "#1e1e1e"
+TEXT_CLR = "#888888"
+ACCENT   = "#e63a00"
+ACCENT2  = "#ff9966"
+ACCENT3  = "#ffcc00"
+ACCENT4  = "#4ecdc4"
+ACCENT5  = "#a29bfe"
+PALETTE  = [ACCENT, ACCENT2, ACCENT3, ACCENT4, ACCENT5,
+            "#fd79a8", "#55efc4", "#74b9ff", "#ffeaa7", "#b2bec3"]
+
+H_SM  = 220
+H_MED = 280
+H_LG  = 320
+
+# Read vehicles once — used by every page
+vehicles = get_vehicles()
+vehicle_names = {
+    vid: f"{v['year']} {v['make']} {v['model']}"
+    for vid, v in vehicles.items()
+}
 
