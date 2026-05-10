@@ -143,3 +143,81 @@ def show():
                 file_name=f"motocare_{v['make']}_{v['model']}.csv",
                 mime="text/csv",
             )
+
+# tab 2: edit a record
+    with tab_edit:
+        st.subheader("Edit a Record")
+
+        if df.empty:
+            st.info("No records to edit.")
+        else:
+            # Dropdown to pick which record to edit
+            options = {
+                r["id"]: (
+                    f"{r['date'].strftime('%d %b %Y')}  —  "
+                    f"{r['category']}  —  ${r['cost']:,.2f}"
+                )
+                for _, r in df.iterrows()
+            }
+
+            selected_id = st.selectbox(
+                "Select Record to Edit",
+                list(options.keys()),
+                format_func=lambda x: options[x],
+                key="edit_rec_sel",
+            )
+
+            # Get the full record dict
+            rec = next(
+                r for r in st.session_state.data["records"]
+                if r["id"] == selected_id
+            )
+
+            with st.form("edit_record_form"):
+                c1, c2 = st.columns(2)
+                new_date = c1.date_input(
+                    "Service Date",
+                    value=date.fromisoformat(rec["date"])
+                )
+                new_cat = c2.selectbox(
+                    "Category", CATEGORIES,
+                    index=CATEGORIES.index(rec["category"])
+                )
+
+                new_desc = st.text_area(
+                    "Description / Notes",
+                    value=rec.get("description", "")
+                )
+
+                c3, c4 = st.columns(2)
+                new_cost = c3.number_input(
+                    "Cost ($)",
+                    value=float(rec["cost"]),
+                    min_value=0.0,
+                    step=0.01,
+                    format="%.2f"
+                )
+                new_mileage = c4.number_input(
+                    "Mileage (km)",
+                    value=int(rec.get("mileage", 0)),
+                    min_value=0,
+                    step=1
+                )
+
+                update = st.form_submit_button("UPDATE RECORD")
+
+            if update:
+                for r in st.session_state.data["records"]:
+                    if r["id"] == selected_id:
+                        r.update({
+                            "date":        str(new_date),
+                            "category":    new_cat,
+                            "description": new_desc,
+                            "cost":        new_cost,
+                            "mileage":     new_mileage,
+                            "updated_at":  str(datetime.now()),
+                        })
+                        break
+                save_data(st.session_state.data)
+                st.success("✅ Record updated!")
+                st.rerun()
