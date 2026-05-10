@@ -124,7 +124,7 @@ elif page == "Select a Vehicle":
     select_vehicle.show()
 
 elif page == "Cost Comparison":
-      pass
+    cost_comparison.show()
 
 elif page == "Cost Estimator":
     pass  
