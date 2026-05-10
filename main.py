@@ -117,6 +117,7 @@ from pages_ import dashboard
 from pages_ import select_vehicle
 from pages_ import cost_comparison
 
+
 if page == "Dashboard":
     dashboard.show()
 
