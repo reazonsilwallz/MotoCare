@@ -1,0 +1,46 @@
+{
+  "vehicles": {
+    "07251271-b208-4dd1-8bef-794cc97ccd92": {
+      "year": 2023,
+      "make": "Yamaha",
+      "model": "R6",
+      "plate": "YMH-2023",
+      "vin": "JYARJ18E23A000123",
+      "mileage": 0,
+      "color": "Midnight Black",
+      "created_at": "2026-05-10 01:08:04.079038"
+    }
+  },
+  "records": [
+    {
+      "id": "397f64a9-68c3-41bb-a657-96c0d5737113",
+      "vehicle_id": "07251271-b208-4dd1-8bef-794cc97ccd92",
+      "date": "2024-01-10",
+      "category": "Oil Change",
+      "description": "First oil change, Yamalube 10W-40 full synthetic, oil filter",
+      "cost": 55.0,
+      "mileage": 1000,
+      "created_at": "2026-05-10 01:09:07.604634"
+    },
+    {
+      "id": "faef475f-1588-4771-af3c-bf2b7e517e15",
+      "vehicle_id": "07251271-b208-4dd1-8bef-794cc97ccd92",
+      "date": "2024-02-14",
+      "category": "Tire Services",
+      "description": "Installed Michelin Power RS front and rear tires",
+      "cost": 380.0,
+      "mileage": 2800,
+      "created_at": "2026-05-10 01:09:55.641376"
+    },
+    {
+      "id": "ad6aac33-cd68-4467-b90e-0d9f93daa4f0",
+      "vehicle_id": "07251271-b208-4dd1-8bef-794cc97ccd92",
+      "date": "2024-03-05",
+      "category": "Brake Services",
+      "description": "Front brake pads replaced, brake fluid flushed with Motul RBF600",
+      "cost": 165.0,
+      "mileage": 4500,
+      "created_at": "2026-05-10 01:11:46.969720"
+    }
+  ]
+}
