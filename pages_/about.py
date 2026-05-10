@@ -1,11 +1,11 @@
 import streamlit as st
 
 def show():
-    st.title("ℹ️ About Us")
+    st.title("About Us")
     st.markdown("---")
 
     # What is MotoCare?
-    st.subheader("🏍️ What is MotoCare?")
+    st.subheader("What is MotoCare?")
     st.write("""
         MotoCare is a personal vehicle maintenance tracking application built
         to help car and motorcycle owners stay on top of their service history
@@ -21,7 +21,7 @@ def show():
     k1.metric("Service Categories", "6")
     k2.metric("App Pages",          "5")
     k3.metric("Vehicles Supported", "Unlimited")
-    k4.metric("Cost to Use",        "$0")
+    k4.metric("Cost to Use",        "Free")
 
     st.markdown("---")
 
@@ -29,7 +29,7 @@ def show():
     col1, col2 = st.columns(2)
 
     with col1:
-        st.subheader("📋 Core Features")
+        st.subheader("Core Features")
         st.write("""
         - Full CRUD for vehicles and records
         - Cost tracking per service and category
@@ -40,7 +40,7 @@ def show():
         """)
 
     with col2:
-        st.subheader("🗺️ How to Navigate")
+        st.subheader("How to Navigate")
         st.write("""
         - **Dashboard** — KPIs and charts for any vehicle
         - **Select a Vehicle** — register vehicles and add records
