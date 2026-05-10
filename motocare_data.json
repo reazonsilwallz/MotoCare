@@ -201,6 +201,36 @@
       "cost": 580.0,
       "mileage": 27000,
       "created_at": "2026-05-10 19:23:16.102793"
+    },
+    {
+      "id": "8b902a91-20c3-46ef-9b72-0d45eb5eeaf2",
+      "vehicle_id": "869e1b16-c9ac-49f6-b8cf-7b0937a09666",
+      "date": "2024-08-25",
+      "category": "Brake Services",
+      "description": "Rear brake pads and rotors replaced, parking brake adjusted",
+      "cost": 290.0,
+      "mileage": 30000,
+      "created_at": "2026-05-10 19:24:52.088795"
+    },
+    {
+      "id": "33e410b1-53b3-40ed-a61e-e364907a6713",
+      "vehicle_id": "869e1b16-c9ac-49f6-b8cf-7b0937a09666",
+      "date": "2024-09-30",
+      "category": "Oil Change",
+      "description": "Full synthetic oil change 0W-20, engine air filter replaced",
+      "cost": 70.0,
+      "mileage": 34000,
+      "created_at": "2026-05-10 19:25:27.349055"
+    },
+    {
+      "id": "aee0bde8-e850-49db-8f3c-6ce80d7db82b",
+      "vehicle_id": "869e1b16-c9ac-49f6-b8cf-7b0937a09666",
+      "date": "2024-10-14",
+      "category": "Others",
+      "description": "Windshield wipers replaced, all fluids topped up, belt inspection",
+      "cost": 85.0,
+      "mileage": 37000,
+      "created_at": "2026-05-10 19:26:02.259725"
     }
   ]
 }
