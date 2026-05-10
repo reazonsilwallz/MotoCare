@@ -139,42 +139,6 @@ def show():
 
     st.markdown("---")
 
-   #Monthly Spend by Vehicle Line Chart
-    st.subheader("Monthly Spend by Vehicle")
-
-    all_records = get_records()
-
-    if all_records:
-        all_df = pd.DataFrame(all_records)
-        all_df["date"]    = pd.to_datetime(all_df["date"])
-        all_df["cost"]    = all_df["cost"].astype(float)
-        all_df["Month"]   = all_df["date"].dt.to_period("M").astype(str)
-        all_df["Vehicle"] = all_df["vehicle_id"].map(
-            lambda x: f"{vehicles[x]['year']} {vehicles[x]['make']} {vehicles[x]['model']}"
-            if x in vehicles else "Unknown"
-        )
-
-        mon_veh = all_df.groupby(["Month", "Vehicle"])["cost"].sum().reset_index()
-        mon_veh.columns = ["Month", "Vehicle", "Cost"]
-
-        line = alt.Chart(mon_veh).mark_line(
-            strokeWidth=2, point=True
-        ).encode(
-            x=alt.X("Month:O",   axis=alt.Axis(labelAngle=-30)),
-            y=alt.Y("Cost:Q",    axis=alt.Axis(format="$,.0f")),
-            color=alt.Color("Vehicle:N",
-                            scale=alt.Scale(range=PALETTE),
-                            legend=alt.Legend(orient="bottom")),
-            tooltip=["Month", "Vehicle", alt.Tooltip("Cost:Q", format="$,.2f")]
-        ).properties(height=H_LG).configure_view(
-            strokeWidth=0, fill=CARD_BG
-        ).configure_axis(
-            gridColor=GRID_CLR, labelColor=TEXT_CLR, titleColor=TEXT_CLR
-        ).configure_legend(
-            labelColor=TEXT_CLR, titleColor=TEXT_CLR,
-            fillColor=CARD_BG, strokeColor=GRID_CLR
-        )
-        st.altair_chart(line, use_container_width=True)
 
     st.markdown("---")
 
