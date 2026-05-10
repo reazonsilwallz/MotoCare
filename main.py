@@ -128,7 +128,7 @@ elif page == "Cost Comparison":
     cost_comparison.show()
 
 elif page == "Edit & Delete Records":
-    pass 
+    edit_delete.show()
 
 elif page == "About Us":
     pass  
