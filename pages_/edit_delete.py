@@ -277,7 +277,7 @@ def show():
                 "Select Record to Delete",
                 list(options.keys()),
                 format_func=lambda x: options[x],
-                key="del_rec_sel",
+                key="delete_rec_sel",
             )
 
             st.warning(
@@ -285,7 +285,7 @@ def show():
                 f"**{options[del_id]}**"
             )
 
-            if st.button("DELETE RECORD", type="primary"):
+            if st.button("DELETE RECORD", type="primary", key=f"del_btn_{del_id}"):
                 st.session_state.data["records"] = [
                     r for r in st.session_state.data["records"]
                     if r["id"] != del_id
