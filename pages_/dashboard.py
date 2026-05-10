@@ -4,16 +4,16 @@ import pandas as pd
 from helpers import get_vehicles, get_records, records_df
 
 # chart styling constants
-CARD_BG  = "#111111"
-GRID_CLR = "#1e1e1e"
-TEXT_CLR = "#888888"
-ACCENT   = "#e63a00"
-ACCENT2  = "#ff9966"
-ACCENT3  = "#ffcc00"
-ACCENT4  = "#4ecdc4"
-ACCENT5  = "#a29bfe"
+CARD_BG  = "#ffffff"
+GRID_CLR = "#e0e0e0"
+TEXT_CLR = "#444444"
+ACCENT   = "#1a3a6b"   # Navy blue — primary
+ACCENT2  = "#2e6fbd"   # Medium blue
+ACCENT3  = "#f0a500"   # Gold
+ACCENT4  = "#e63a00"   # Red
+ACCENT5  = "#4ecdc4"   # Teal
 PALETTE  = [ACCENT, ACCENT2, ACCENT3, ACCENT4, ACCENT5,
-            "#fd79a8", "#55efc4", "#74b9ff", "#ffeaa7", "#b2bec3"]
+            "#6c5ce7", "#00b894", "#fd79a8", "#fdcb6e", "#74b9ff"]
 
 H_SM  = 220
 H_MED = 280
