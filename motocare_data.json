@@ -81,6 +81,26 @@
       "cost": 140.0,
       "mileage": 12500,
       "created_at": "2026-05-10 01:19:14.853672"
+    },
+    {
+      "id": "fca8ba96-6b5d-4105-ad6b-82c688ea9272",
+      "vehicle_id": "07251271-b208-4dd1-8bef-794cc97ccd92",
+      "date": "2024-08-08",
+      "category": "Tire Services",
+      "description": "Front and rear tire pressure adjusted, tires balanced",
+      "cost": 45.0,
+      "mileage": 14000,
+      "created_at": "2026-05-10 01:20:12.713027"
+    },
+    {
+      "id": "3a490249-496e-468d-8133-2ffa838a9669",
+      "vehicle_id": "07251271-b208-4dd1-8bef-794cc97ccd92",
+      "date": "2024-09-18",
+      "category": "Oil Change",
+      "description": "Third oil change, Yamalube 10W-40, air filter cleaned and oiled",
+      "cost": 80.0,
+      "mileage": 16000,
+      "created_at": "2026-05-10 01:20:57.173917"
     }
   ]
 }
