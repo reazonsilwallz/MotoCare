@@ -138,3 +138,82 @@ def show():
         st.altair_chart(svc_bar, use_container_width=True)
 
     st.markdown("---")
+
+   #Monthly Spend by Vehicle Line Chart
+    st.subheader("Monthly Spend by Vehicle")
+
+    all_records = get_records()
+
+    if all_records:
+        all_df = pd.DataFrame(all_records)
+        all_df["date"]    = pd.to_datetime(all_df["date"])
+        all_df["cost"]    = all_df["cost"].astype(float)
+        all_df["Month"]   = all_df["date"].dt.to_period("M").astype(str)
+        all_df["Vehicle"] = all_df["vehicle_id"].map(
+            lambda x: f"{vehicles[x]['year']} {vehicles[x]['make']} {vehicles[x]['model']}"
+            if x in vehicles else "Unknown"
+        )
+
+        mon_veh = all_df.groupby(["Month", "Vehicle"])["cost"].sum().reset_index()
+        mon_veh.columns = ["Month", "Vehicle", "Cost"]
+
+        line = alt.Chart(mon_veh).mark_line(
+            strokeWidth=2, point=True
+        ).encode(
+            x=alt.X("Month:O",   axis=alt.Axis(labelAngle=-30)),
+            y=alt.Y("Cost:Q",    axis=alt.Axis(format="$,.0f")),
+            color=alt.Color("Vehicle:N",
+                            scale=alt.Scale(range=PALETTE),
+                            legend=alt.Legend(orient="bottom")),
+            tooltip=["Month", "Vehicle", alt.Tooltip("Cost:Q", format="$,.2f")]
+        ).properties(height=H_LG).configure_view(
+            strokeWidth=0, fill=CARD_BG
+        ).configure_axis(
+            gridColor=GRID_CLR, labelColor=TEXT_CLR, titleColor=TEXT_CLR
+        ).configure_legend(
+            labelColor=TEXT_CLR, titleColor=TEXT_CLR,
+            fillColor=CARD_BG, strokeColor=GRID_CLR
+        )
+        st.altair_chart(line, use_container_width=True)
+
+    st.markdown("---")
+
+    # Category Breakdown per Vehicle
+    st.subheader("Category Breakdown per Vehicle")
+
+    if all_records:
+        cat_veh = all_df.groupby(["category", "Vehicle"])["cost"].sum().reset_index()
+        cat_veh.columns = ["Category", "Vehicle", "Cost"]
+
+        cat_bar = alt.Chart(cat_veh).mark_bar(
+            cornerRadiusTopLeft=2,
+            cornerRadiusTopRight=2
+        ).encode(
+            x=alt.X("Category:O",  axis=alt.Axis(labelAngle=-20)),
+            y=alt.Y("Cost:Q",      axis=alt.Axis(format="$,.0f")),
+            color=alt.Color("Vehicle:N",
+                            scale=alt.Scale(range=PALETTE),
+                            legend=alt.Legend(orient="bottom")),
+            xOffset="Vehicle:N",
+            tooltip=["Category", "Vehicle", alt.Tooltip("Cost:Q", format="$,.2f")]
+        ).properties(height=H_LG).configure_view(
+            strokeWidth=0, fill=CARD_BG
+        ).configure_axis(
+            gridColor=GRID_CLR, labelColor=TEXT_CLR,
+            titleColor=TEXT_CLR, labelAngle=-20
+        ).configure_legend(
+            labelColor=TEXT_CLR, titleColor=TEXT_CLR,
+            fillColor=CARD_BG, strokeColor=GRID_CLR
+        )
+        st.altair_chart(cat_bar, use_container_width=True)
+
+    st.markdown("---")
+
+    # Full Comparison Table
+    st.subheader("Full Comparison Table")
+
+    fmt_df = summary_df.set_index("Vehicle").copy()
+    fmt_df["Total Cost"]      = fmt_df["Total Cost"].map("${:,.2f}".format)
+    fmt_df["Avg per Service"] = fmt_df["Avg per Service"].map("${:,.2f}".format)
+    fmt_df["Highest Bill"]    = fmt_df["Highest Bill"].map("${:,.2f}".format)
+    st.dataframe(fmt_df, use_container_width=True)
