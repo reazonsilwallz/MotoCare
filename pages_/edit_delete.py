@@ -17,7 +17,7 @@ H_SM = 220
 
 
 def show():
-    st.title("✏️ Edit & Delete Records")
+    st.title("Edit & Delete Records")
     st.markdown("---")
 
     vehicles = get_vehicles()
@@ -44,9 +44,9 @@ def show():
 
  # 3 tabs: view records, edit record, delete record
     tab_view, tab_edit, tab_delete = st.tabs([
-        "📋 View Records",
-        "✏️ Edit Record",
-        "🗑️ Delete Record"
+        "View Records",
+        "Edit Record",
+        "Delete Record"
     ])
 
   # View tab: show all records with filters and mini charts
@@ -138,7 +138,7 @@ def show():
             csv_data["date"] = csv_data["date"].dt.strftime("%Y-%m-%d")
             v = vehicles[active_vid]
             st.download_button(
-                "📥 EXPORT CSV",
+                "EXPORT CSV",
                 data=csv_data.to_csv(index=False),
                 file_name=f"motocare_{v['make']}_{v['model']}.csv",
                 mime="text/csv",
@@ -219,5 +219,77 @@ def show():
                         })
                         break
                 save_data(st.session_state.data)
-                st.success("✅ Record updated!")
+                st.success("Record updated!")
+                st.rerun()
+
+# tab 3: delete a record
+    with tab_delete:
+        st.subheader("Delete a Record")
+
+        if df.empty:
+            st.info("No records to delete.")
+        else:
+            options = {
+                r["id"]: (
+                    f"{r['date'].strftime('%d %b %Y')}  —  "
+                    f"{r['category']}  —  ${r['cost']:,.2f}"
+                )
+                for _, r in df.iterrows()
+            }
+
+            del_id = st.selectbox(
+                "Select Record to Delete",
+                list(options.keys()),
+                format_func=lambda x: options[x],
+                key="del_rec_sel",
+            )
+
+            st.warning(
+                f"You are about to permanently delete: "
+                f"**{options[del_id]}**"
+            )
+
+            if st.button("DELETE RECORD", type="primary"):
+                st.session_state.data["records"] = [
+                    r for r in st.session_state.data["records"]
+                    if r["id"] != del_id
+                ]
+                save_data(st.session_state.data)
+                st.success("Record deleted.")
+                st.rerun()
+
+#tab 3: delete a record
+    with tab_delete:
+        st.subheader("Delete a Record")
+
+        if df.empty:
+            st.info("No records to delete.")
+        else:
+            options = {
+                r["id"]: (
+                    f"{r['date'].strftime('%d %b %Y')}  —  "
+                    f"{r['category']}  —  ${r['cost']:,.2f}"
+                )
+                for _, r in df.iterrows()
+            }
+
+            del_id = st.selectbox(
+                "Select Record to Delete",
+                list(options.keys()),
+                format_func=lambda x: options[x],
+                key="del_rec_sel",
+            )
+
+            st.warning(
+                f"You are about to permanently delete: "
+                f"**{options[del_id]}**"
+            )
+
+            if st.button("DELETE RECORD", type="primary"):
+                st.session_state.data["records"] = [
+                    r for r in st.session_state.data["records"]
+                    if r["id"] != del_id
+                ]
+                save_data(st.session_state.data)
+                st.success("Record deleted.")
                 st.rerun()
