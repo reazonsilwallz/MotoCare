@@ -56,11 +56,12 @@ def records_df(vehicle_id=None):
     df["cost"] = df["cost"].astype(float)
     return df.sort_values("date", ascending=False)
 
+icon = Image.open("assets/logo.png")
 
 # Page Configuration
 st.set_page_config(
     page_title="MotoCare - Motorcycle Maintenance Tracker",
-    page_icon="",
+    page_icon=icon,
     layout="wide",
     initial_sidebar_state="expanded",
 )
