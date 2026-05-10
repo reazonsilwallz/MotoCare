@@ -112,7 +112,26 @@ vehicle_names = {
     for vid, v in vehicles.items()
 }
 
-# Page Routing
+# Page Routes
+from pages_ import select_vehicle
+
 if page == "Dashboard":
-    pass  
+    pass  # Phase 5
+
+elif page == "Select a Vehicle":
+    select_vehicle.show()
+
+elif page == "Cost Comparison":
+    pass  # Phase 6
+
+elif page == "Cost Estimator":
+    pass  # Phase 7
+
+elif page == "Edit & Delete Records":
+    pass  # Phase 8
+
+elif page == "About Us":
+    pass  # Phase 9
+
+
 
