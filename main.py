@@ -115,6 +115,7 @@ vehicle_names = {
 # Page Routes
 from pages_ import dashboard
 from pages_ import select_vehicle
+from pages_ import cost_comparison
 
 if page == "Dashboard":
     dashboard.show()
@@ -123,7 +124,7 @@ elif page == "Select a Vehicle":
     select_vehicle.show()
 
 elif page == "Cost Comparison":
-    pass  
+      pass
 
 elif page == "Cost Estimator":
     pass  
