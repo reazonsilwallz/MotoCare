@@ -191,6 +191,16 @@
       "cost": 0.0,
       "mileage": 0,
       "created_at": "2026-05-10 19:22:22.006098"
+    },
+    {
+      "id": "21f33d17-acf8-400e-b373-098d657995bf",
+      "vehicle_id": "869e1b16-c9ac-49f6-b8cf-7b0937a09666",
+      "date": "2024-07-10",
+      "category": "Tire Services",
+      "description": "Replaced all four tires with Michelin Pilot Sport 4",
+      "cost": 580.0,
+      "mileage": 27000,
+      "created_at": "2026-05-10 19:23:16.102793"
     }
   ]
 }
