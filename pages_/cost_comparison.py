@@ -142,13 +142,20 @@ def show():
 
     st.markdown("---")
 
-    # Category Breakdown per Vehicle
+# category breakdown per vehicle
     st.subheader("Category Breakdown per Vehicle")
 
-    all_records = get_records()
+    all_records = get_records()  # fetch all records fresh
 
-    
     if all_records:
+        all_df = pd.DataFrame(all_records)  # define all_df here
+        all_df["date"]    = pd.to_datetime(all_df["date"])
+        all_df["cost"]    = all_df["cost"].astype(float)
+        all_df["Vehicle"] = all_df["vehicle_id"].map(
+            lambda x: f"{vehicles[x]['year']} {vehicles[x]['make']} {vehicles[x]['model']}"
+            if x in vehicles else "Unknown"
+        )
+
         cat_veh = all_df.groupby(["category", "Vehicle"])["cost"].sum().reset_index()
         cat_veh.columns = ["Category", "Vehicle", "Cost"]
 
@@ -176,7 +183,7 @@ def show():
 
     st.markdown("---")
 
-    # Full Comparison Table
+    # full comparison table
     st.subheader("Full Comparison Table")
 
     fmt_df = summary_df.set_index("Vehicle").copy()
