@@ -145,6 +145,9 @@ def show():
     # Category Breakdown per Vehicle
     st.subheader("Category Breakdown per Vehicle")
 
+    all_records = get_records()
+
+    
     if all_records:
         cat_veh = all_df.groupby(["category", "Vehicle"])["cost"].sum().reset_index()
         cat_veh.columns = ["Category", "Vehicle", "Cost"]
