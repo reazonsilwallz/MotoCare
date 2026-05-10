@@ -112,3 +112,7 @@ vehicle_names = {
     for vid, v in vehicles.items()
 }
 
+# Page Routing
+if page == "Dashboard":
+    pass  
+
