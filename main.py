@@ -69,6 +69,7 @@ st.set_page_config(
 
 
 # Sidebar Navigation
+st.sidebar.image("assets/logo.png", use_container_width=True)
 st.sidebar.title("MotoCare")
 st.sidebar.markdown("---")
 
