@@ -97,3 +97,44 @@ def show():
             fillColor=CARD_BG, strokeColor=GRID_CLR
         )
         st.altair_chart(pie, use_container_width=True)
+
+    # Row 2 - Avg Cost per Service + Number of Services
+    col3, col4 = st.columns(2)
+
+    with col3:
+        st.subheader("Average Cost per Service")
+
+        avg_bar = alt.Chart(summary_df).mark_bar(
+            color=ACCENT2,
+            cornerRadiusTopRight=3,
+            cornerRadiusBottomRight=3
+        ).encode(
+            x=alt.X("Avg per Service:Q", axis=alt.Axis(format="$,.0f")),
+            y=alt.Y("Vehicle:N", sort="-x"),
+            tooltip=["Vehicle", alt.Tooltip("Avg per Service:Q", format="$,.2f")]
+        ).properties(height=H_SM).configure_view(
+            strokeWidth=0, fill=CARD_BG
+        ).configure_axis(
+            gridColor=GRID_CLR, labelColor=TEXT_CLR, titleColor=TEXT_CLR
+        )
+        st.altair_chart(avg_bar, use_container_width=True)
+
+    with col4:
+        st.subheader("Number of Services")
+
+        svc_bar = alt.Chart(summary_df).mark_bar(
+            color=ACCENT3,
+            cornerRadiusTopLeft=3,
+            cornerRadiusTopRight=3
+        ).encode(
+            x=alt.X("Vehicle:O",  axis=alt.Axis(labelAngle=-15)),
+            y=alt.Y("Services:Q"),
+            tooltip=["Vehicle", "Services"]
+        ).properties(height=H_SM).configure_view(
+            strokeWidth=0, fill=CARD_BG
+        ).configure_axis(
+            gridColor=GRID_CLR, labelColor=TEXT_CLR, titleColor=TEXT_CLR
+        )
+        st.altair_chart(svc_bar, use_container_width=True)
+
+    st.markdown("---")
