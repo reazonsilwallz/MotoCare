@@ -116,7 +116,7 @@ vehicle_names = {
 from pages_ import dashboard
 from pages_ import select_vehicle
 from pages_ import cost_comparison
-
+from pages_ import edit_delete
 
 if page == "Dashboard":
     dashboard.show()
