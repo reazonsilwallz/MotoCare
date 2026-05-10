@@ -171,6 +171,26 @@
       "cost": 65.0,
       "mileage": 21000,
       "created_at": "2026-05-10 19:21:31.752170"
+    },
+    {
+      "id": "7700adf1-e099-425f-81ce-0ef43acd2f59",
+      "vehicle_id": "869e1b16-c9ac-49f6-b8cf-7b0937a09666",
+      "date": "2024-06-20",
+      "category": "Oil Change",
+      "description": " Spark plugs replaced, throttle body cleaned, fuel system service",
+      "cost": 220.0,
+      "mileage": 24000,
+      "created_at": "2026-05-10 19:22:19.445704"
+    },
+    {
+      "id": "f02ce8c0-ed08-4a39-8d34-c5aa8555e6f5",
+      "vehicle_id": "869e1b16-c9ac-49f6-b8cf-7b0937a09666",
+      "date": "2026-05-10",
+      "category": "Oil Change",
+      "description": "",
+      "cost": 0.0,
+      "mileage": 0,
+      "created_at": "2026-05-10 19:22:22.006098"
     }
   ]
 }
