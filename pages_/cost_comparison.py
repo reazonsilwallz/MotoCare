@@ -53,11 +53,15 @@ def show():
         summary_df["Total Cost"].idxmax(), "Vehicle"
     ] if not summary_df.empty else "—"
 
-    k1, k2, k3 = st.columns(3)
-    k1.metric("Fleet Total Spent",     f"${fleet_total:,.2f}")
-    k2.metric("Fleet Total Services",   str(fleet_services))
-    k3.metric("Most Expensive Vehicle", most_expensive)
+    least_expensive = summary_df.loc[
+        summary_df["Total Cost"].idxmin(), "Vehicle"
+    ] if not summary_df.empty else "—"
 
+    k1, k2, k3, k4 = st.columns(4)
+    k1.metric("Fleet Total Spent",      f"${fleet_total:,.2f}")
+    k2.metric("Fleet Total Services",    str(fleet_services))
+    k3.metric("Most Expensive Vehicle",  most_expensive)
+    k4.metric("Least Expensive Vehicle", least_expensive)
     st.markdown("---")
 
 #Row 1 - Total Cost Bar + Cost Share Pie
