@@ -101,6 +101,16 @@
       "cost": 80.0,
       "mileage": 16000,
       "created_at": "2026-05-10 01:20:57.173917"
+    },
+    {
+      "id": "8459d9e6-4c93-4c22-a948-de00e804ed9f",
+      "vehicle_id": "07251271-b208-4dd1-8bef-794cc97ccd92",
+      "date": "2024-10-30",
+      "category": "Others",
+      "description": "Drive chain replaced with DID 520ERV3, front and rear sprockets replaced",
+      "cost": 220.0,
+      "mileage": 18500,
+      "created_at": "2026-05-10 01:21:57.708959"
     }
   ]
 }
