@@ -1,0 +1,616 @@
+{
+  "vehicles": {
+    "v001": {
+      "year": 2023,
+      "make": "Yamaha",
+      "model": "R6",
+      "plate": "YMH-2023",
+      "vin": "JYARJ18E23A000123",
+      "mileage": 18500,
+      "color": "Midnight Black",
+      "created_at": "2024-01-01 00:00:00"
+    },
+    "v002": {
+      "year": 2021,
+      "make": "Toyota",
+      "model": "Camry",
+      "plate": "TYT-2021",
+      "vin": "4T1BF1FK5MU123456",
+      "mileage": 40000,
+      "color": "Pearl White",
+      "created_at": "2024-01-01 00:00:00"
+    },
+    "v003": {
+      "year": 2020,
+      "make": "Honda",
+      "model": "Civic",
+      "plate": "HND-2020",
+      "vin": "2HGFC2F59LH123456",
+      "mileage": 43000,
+      "color": "Lunar Silver",
+      "created_at": "2024-01-01 00:00:00"
+    },
+    "v004": {
+      "year": 2022,
+      "make": "Ford",
+      "model": "Mustang",
+      "plate": "FRD-2022",
+      "vin": "1FA6P8CF5N5100234",
+      "mileage": 22000,
+      "color": "Race Red",
+      "created_at": "2024-01-01 00:00:00"
+    },
+    "v005": {
+      "year": 2019,
+      "make": "Kawasaki",
+      "model": "Ninja ZX6R",
+      "plate": "KWS-2019",
+      "vin": "JKBZXJE19KB000456",
+      "mileage": 31000,
+      "color": "Lime Green",
+      "created_at": "2024-01-01 00:00:00"
+    }
+  },
+  "records": [
+    {
+      "id": "r001",
+      "vehicle_id": "v001",
+      "date": "2024-01-10",
+      "category": "Oil Change",
+      "description": "First oil change, Yamalube 10W-40 full synthetic, oil filter replaced",
+      "cost": 55.0,
+      "mileage": 1000,
+      "created_at": "2024-01-10 00:00:00"
+    },
+    {
+      "id": "r002",
+      "vehicle_id": "v001",
+      "date": "2024-02-14",
+      "category": "Tire Services",
+      "description": "Installed Michelin Power RS front and rear tires",
+      "cost": 380.0,
+      "mileage": 2800,
+      "created_at": "2024-02-14 00:00:00"
+    },
+    {
+      "id": "r003",
+      "vehicle_id": "v001",
+      "date": "2024-03-05",
+      "category": "Brake Services",
+      "description": "Front brake pads replaced, brake fluid flushed with Motul RBF600",
+      "cost": 165.0,
+      "mileage": 4500,
+      "created_at": "2024-03-05 00:00:00"
+    },
+    {
+      "id": "r004",
+      "vehicle_id": "v001",
+      "date": "2024-04-01",
+      "category": "Battery Services",
+      "description": "Battery terminals cleaned, battery replaced with Yuasa YTZ10S",
+      "cost": 110.0,
+      "mileage": 6200,
+      "created_at": "2024-04-01 00:00:00"
+    },
+    {
+      "id": "r005",
+      "vehicle_id": "v001",
+      "date": "2024-05-20",
+      "category": "Oil Change",
+      "description": "Second oil change, Yamalube 10W-40, spark plugs replaced NGK CR9EK",
+      "cost": 90.0,
+      "mileage": 8000,
+      "created_at": "2024-05-20 00:00:00"
+    },
+    {
+      "id": "r006",
+      "vehicle_id": "v001",
+      "date": "2024-06-15",
+      "category": "Engine Tune-Up",
+      "description": "Full engine tune-up, throttle body synchronization, valve clearance inspection",
+      "cost": 310.0,
+      "mileage": 10000,
+      "created_at": "2024-06-15 00:00:00"
+    },
+    {
+      "id": "r007",
+      "vehicle_id": "v001",
+      "date": "2024-07-22",
+      "category": "Brake Services",
+      "description": "Rear brake pads replaced, rear caliper cleaned and lubricated",
+      "cost": 140.0,
+      "mileage": 12500,
+      "created_at": "2024-07-22 00:00:00"
+    },
+    {
+      "id": "r008",
+      "vehicle_id": "v001",
+      "date": "2024-08-08",
+      "category": "Tire Services",
+      "description": "Front and rear tire pressure adjusted, tires balanced",
+      "cost": 45.0,
+      "mileage": 14000,
+      "created_at": "2024-08-08 00:00:00"
+    },
+    {
+      "id": "r009",
+      "vehicle_id": "v001",
+      "date": "2024-09-18",
+      "category": "Oil Change",
+      "description": "Third oil change, Yamalube 10W-40, air filter cleaned and oiled",
+      "cost": 80.0,
+      "mileage": 16000,
+      "created_at": "2024-09-18 00:00:00"
+    },
+    {
+      "id": "r010",
+      "vehicle_id": "v001",
+      "date": "2024-10-30",
+      "category": "Others",
+      "description": "Drive chain replaced with DID 520ERV3, front and rear sprockets replaced",
+      "cost": 220.0,
+      "mileage": 18500,
+      "created_at": "2024-10-30 00:00:00"
+    },
+    {
+      "id": "r011",
+      "vehicle_id": "v002",
+      "date": "2024-01-05",
+      "category": "Oil Change",
+      "description": "Synthetic oil change 0W-20, oil filter replaced, reset oil life monitor",
+      "cost": 65.0,
+      "mileage": 5000,
+      "created_at": "2024-01-05 00:00:00"
+    },
+    {
+      "id": "r012",
+      "vehicle_id": "v002",
+      "date": "2024-02-18",
+      "category": "Tire Services",
+      "description": "Rotated all four tires, wheel alignment checked and adjusted",
+      "cost": 85.0,
+      "mileage": 8000,
+      "created_at": "2024-02-18 00:00:00"
+    },
+    {
+      "id": "r013",
+      "vehicle_id": "v002",
+      "date": "2024-03-22",
+      "category": "Brake Services",
+      "description": "Front brake pads and rotors replaced, brake fluid flushed",
+      "cost": 320.0,
+      "mileage": 11000,
+      "created_at": "2024-03-22 00:00:00"
+    },
+    {
+      "id": "r014",
+      "vehicle_id": "v002",
+      "date": "2024-04-10",
+      "category": "Oil Change",
+      "description": "Synthetic oil change 0W-20, cabin air filter replaced",
+      "cost": 75.0,
+      "mileage": 15000,
+      "created_at": "2024-04-10 00:00:00"
+    },
+    {
+      "id": "r015",
+      "vehicle_id": "v002",
+      "date": "2024-05-30",
+      "category": "Battery Services",
+      "description": "Battery replaced with Optima RedTop 35, terminals cleaned",
+      "cost": 180.0,
+      "mileage": 18000,
+      "created_at": "2024-05-30 00:00:00"
+    },
+    {
+      "id": "r016",
+      "vehicle_id": "v002",
+      "date": "2024-06-25",
+      "category": "Tire Services",
+      "description": "Replaced all four tires with Michelin Primacy 4, wheel balancing",
+      "cost": 620.0,
+      "mileage": 20000,
+      "created_at": "2024-06-25 00:00:00"
+    },
+    {
+      "id": "r017",
+      "vehicle_id": "v002",
+      "date": "2024-07-14",
+      "category": "Engine Tune-Up",
+      "description": "Spark plugs replaced, throttle body cleaned, fuel injector service",
+      "cost": 240.0,
+      "mileage": 23000,
+      "created_at": "2024-07-14 00:00:00"
+    },
+    {
+      "id": "r018",
+      "vehicle_id": "v002",
+      "date": "2024-08-20",
+      "category": "Oil Change",
+      "description": "Synthetic oil change 0W-20, engine air filter replaced",
+      "cost": 70.0,
+      "mileage": 27000,
+      "created_at": "2024-08-20 00:00:00"
+    },
+    {
+      "id": "r019",
+      "vehicle_id": "v002",
+      "date": "2024-09-15",
+      "category": "Brake Services",
+      "description": "Rear brake pads replaced, parking brake adjusted",
+      "cost": 180.0,
+      "mileage": 30000,
+      "created_at": "2024-09-15 00:00:00"
+    },
+    {
+      "id": "r020",
+      "vehicle_id": "v002",
+      "date": "2024-10-22",
+      "category": "Others",
+      "description": "Windshield wipers replaced, coolant top up, all fluids checked",
+      "cost": 55.0,
+      "mileage": 33000,
+      "created_at": "2024-10-22 00:00:00"
+    },
+    {
+      "id": "r021",
+      "vehicle_id": "v002",
+      "date": "2024-11-08",
+      "category": "Engine Tune-Up",
+      "description": "Full engine diagnostic, PCV valve replaced, intake manifold cleaned",
+      "cost": 195.0,
+      "mileage": 36000,
+      "created_at": "2024-11-08 00:00:00"
+    },
+    {
+      "id": "r022",
+      "vehicle_id": "v002",
+      "date": "2024-12-20",
+      "category": "Oil Change",
+      "description": "Synthetic oil change 0W-20, oil filter replaced, tire pressure checked",
+      "cost": 65.0,
+      "mileage": 40000,
+      "created_at": "2024-12-20 00:00:00"
+    },
+    {
+      "id": "r023",
+      "vehicle_id": "v003",
+      "date": "2024-01-08",
+      "category": "Oil Change",
+      "description": "Full synthetic oil change 0W-20, oil filter replaced",
+      "cost": 60.0,
+      "mileage": 8000,
+      "created_at": "2024-01-08 00:00:00"
+    },
+    {
+      "id": "r024",
+      "vehicle_id": "v003",
+      "date": "2024-02-12",
+      "category": "Tire Services",
+      "description": "Rotated all four tires, wheel alignment adjusted",
+      "cost": 90.0,
+      "mileage": 11000,
+      "created_at": "2024-02-12 00:00:00"
+    },
+    {
+      "id": "r025",
+      "vehicle_id": "v003",
+      "date": "2024-03-18",
+      "category": "Brake Services",
+      "description": "Front brake pads replaced, brake fluid flushed",
+      "cost": 210.0,
+      "mileage": 14000,
+      "created_at": "2024-03-18 00:00:00"
+    },
+    {
+      "id": "r026",
+      "vehicle_id": "v003",
+      "date": "2024-04-22",
+      "category": "Battery Services",
+      "description": "Battery load tested and replaced with Optima YellowTop",
+      "cost": 160.0,
+      "mileage": 17000,
+      "created_at": "2024-04-22 00:00:00"
+    },
+    {
+      "id": "r027",
+      "vehicle_id": "v003",
+      "date": "2024-05-15",
+      "category": "Oil Change",
+      "description": "Full synthetic oil change 0W-20, cabin air filter replaced",
+      "cost": 65.0,
+      "mileage": 21000,
+      "created_at": "2024-05-15 00:00:00"
+    },
+    {
+      "id": "r028",
+      "vehicle_id": "v003",
+      "date": "2024-06-20",
+      "category": "Engine Tune-Up",
+      "description": "Spark plugs replaced, throttle body cleaned, fuel system service",
+      "cost": 220.0,
+      "mileage": 24000,
+      "created_at": "2024-06-20 00:00:00"
+    },
+    {
+      "id": "r029",
+      "vehicle_id": "v003",
+      "date": "2024-07-10",
+      "category": "Tire Services",
+      "description": "Replaced all four tires with Michelin Pilot Sport 4",
+      "cost": 580.0,
+      "mileage": 27000,
+      "created_at": "2024-07-10 00:00:00"
+    },
+    {
+      "id": "r030",
+      "vehicle_id": "v003",
+      "date": "2024-08-25",
+      "category": "Brake Services",
+      "description": "Rear brake pads and rotors replaced, parking brake adjusted",
+      "cost": 290.0,
+      "mileage": 30000,
+      "created_at": "2024-08-25 00:00:00"
+    },
+    {
+      "id": "r031",
+      "vehicle_id": "v003",
+      "date": "2024-09-30",
+      "category": "Oil Change",
+      "description": "Full synthetic oil change 0W-20, engine air filter replaced",
+      "cost": 70.0,
+      "mileage": 34000,
+      "created_at": "2024-09-30 00:00:00"
+    },
+    {
+      "id": "r032",
+      "vehicle_id": "v003",
+      "date": "2024-10-14",
+      "category": "Others",
+      "description": "Windshield wipers replaced, all fluids topped up, belt inspection",
+      "cost": 85.0,
+      "mileage": 37000,
+      "created_at": "2024-10-14 00:00:00"
+    },
+    {
+      "id": "r033",
+      "vehicle_id": "v003",
+      "date": "2024-11-20",
+      "category": "Engine Tune-Up",
+      "description": "Full engine diagnostic, PCV valve replaced, coolant flush",
+      "cost": 210.0,
+      "mileage": 40000,
+      "created_at": "2024-11-20 00:00:00"
+    },
+    {
+      "id": "r034",
+      "vehicle_id": "v003",
+      "date": "2024-12-15",
+      "category": "Oil Change",
+      "description": "Full synthetic oil change 0W-20, oil filter replaced, tire pressure checked",
+      "cost": 60.0,
+      "mileage": 43000,
+      "created_at": "2024-12-15 00:00:00"
+    },
+    {
+      "id": "r035",
+      "vehicle_id": "v004",
+      "date": "2024-01-15",
+      "category": "Oil Change",
+      "description": "Full synthetic oil change 5W-50, oil filter replaced",
+      "cost": 80.0,
+      "mileage": 2000,
+      "created_at": "2024-01-15 00:00:00"
+    },
+    {
+      "id": "r036",
+      "vehicle_id": "v004",
+      "date": "2024-02-20",
+      "category": "Tire Services",
+      "description": "Installed Michelin Pilot Sport 4S performance tires all round",
+      "cost": 920.0,
+      "mileage": 4500,
+      "created_at": "2024-02-20 00:00:00"
+    },
+    {
+      "id": "r037",
+      "vehicle_id": "v004",
+      "date": "2024-03-28",
+      "category": "Brake Services",
+      "description": "Brembo performance brake pads installed front and rear, rotors resurfaced",
+      "cost": 480.0,
+      "mileage": 7000,
+      "created_at": "2024-03-28 00:00:00"
+    },
+    {
+      "id": "r038",
+      "vehicle_id": "v004",
+      "date": "2024-04-15",
+      "category": "Engine Tune-Up",
+      "description": "Cold air intake installed, throttle body upgraded, ECU tune performed",
+      "cost": 850.0,
+      "mileage": 9500,
+      "created_at": "2024-04-15 00:00:00"
+    },
+    {
+      "id": "r039",
+      "vehicle_id": "v004",
+      "date": "2024-05-10",
+      "category": "Oil Change",
+      "description": "Full synthetic oil change 5W-50, spark plugs replaced with NGK Iridium",
+      "cost": 95.0,
+      "mileage": 12000,
+      "created_at": "2024-05-10 00:00:00"
+    },
+    {
+      "id": "r040",
+      "vehicle_id": "v004",
+      "date": "2024-06-18",
+      "category": "Battery Services",
+      "description": "Optima RedTop battery replaced, charging system tested",
+      "cost": 220.0,
+      "mileage": 14500,
+      "created_at": "2024-06-18 00:00:00"
+    },
+    {
+      "id": "r041",
+      "vehicle_id": "v004",
+      "date": "2024-07-25",
+      "category": "Brake Services",
+      "description": "Brake fluid flush with Motul RBF660, brake lines inspected",
+      "cost": 150.0,
+      "mileage": 17000,
+      "created_at": "2024-07-25 00:00:00"
+    },
+    {
+      "id": "r042",
+      "vehicle_id": "v004",
+      "date": "2024-08-30",
+      "category": "Others",
+      "description": "Exhaust system upgraded to Borla cat-back, heat shields installed",
+      "cost": 1200.0,
+      "mileage": 19500,
+      "created_at": "2024-08-30 00:00:00"
+    },
+    {
+      "id": "r043",
+      "vehicle_id": "v004",
+      "date": "2024-09-20",
+      "category": "Oil Change",
+      "description": "Full synthetic oil change 5W-50, oil filter replaced, air filter cleaned",
+      "cost": 80.0,
+      "mileage": 22000,
+      "created_at": "2024-09-20 00:00:00"
+    },
+    {
+      "id": "r044",
+      "vehicle_id": "v004",
+      "date": "2024-10-15",
+      "category": "Tire Services",
+      "description": "Tire rotation and balancing, pressure adjusted, alignment checked",
+      "cost": 90.0,
+      "mileage": 22000,
+      "created_at": "2024-10-15 00:00:00"
+    },
+    {
+      "id": "r045",
+      "vehicle_id": "v005",
+      "date": "2024-01-12",
+      "category": "Oil Change",
+      "description": "Motul 7100 10W-40 full synthetic, oil filter and crush washer replaced",
+      "cost": 70.0,
+      "mileage": 22000,
+      "created_at": "2024-01-12 00:00:00"
+    },
+    {
+      "id": "r046",
+      "vehicle_id": "v005",
+      "date": "2024-02-08",
+      "category": "Tire Services",
+      "description": "Replaced front and rear with Bridgestone Battlax RS11 track tires",
+      "cost": 420.0,
+      "mileage": 23500,
+      "created_at": "2024-02-08 00:00:00"
+    },
+    {
+      "id": "r047",
+      "vehicle_id": "v005",
+      "date": "2024-03-15",
+      "category": "Brake Services",
+      "description": "Front brake pads replaced with EBC HH sintered pads, fluid flushed",
+      "cost": 180.0,
+      "mileage": 25000,
+      "created_at": "2024-03-15 00:00:00"
+    },
+    {
+      "id": "r048",
+      "vehicle_id": "v005",
+      "date": "2024-04-20",
+      "category": "Engine Tune-Up",
+      "description": "Full service, valve clearance checked, throttle bodies synchronized",
+      "cost": 350.0,
+      "mileage": 26500,
+      "created_at": "2024-04-20 00:00:00"
+    },
+    {
+      "id": "r049",
+      "vehicle_id": "v005",
+      "date": "2024-05-25",
+      "category": "Oil Change",
+      "description": "Motul 7100 10W-40 full synthetic, air filter replaced",
+      "cost": 75.0,
+      "mileage": 28000,
+      "created_at": "2024-05-25 00:00:00"
+    },
+    {
+      "id": "r050",
+      "vehicle_id": "v005",
+      "date": "2024-06-30",
+      "category": "Battery Services",
+      "description": "Battery replaced with Yuasa YTX9-BS, terminals protected",
+      "cost": 95.0,
+      "mileage": 29500,
+      "created_at": "2024-06-30 00:00:00"
+    },
+    {
+      "id": "r051",
+      "vehicle_id": "v005",
+      "date": "2024-07-18",
+      "category": "Brake Services",
+      "description": "Rear brake pads replaced, brake caliper cleaned and rebuilt",
+      "cost": 160.0,
+      "mileage": 30000,
+      "created_at": "2024-07-18 00:00:00"
+    },
+    {
+      "id": "r052",
+      "vehicle_id": "v005",
+      "date": "2024-08-22",
+      "category": "Others",
+      "description": "Chain and sprocket kit replaced, DID ZVM-X chain installed",
+      "cost": 280.0,
+      "mileage": 31000,
+      "created_at": "2024-08-22 00:00:00"
+    },
+    {
+      "id": "r053",
+      "vehicle_id": "v005",
+      "date": "2024-09-10",
+      "category": "Oil Change",
+      "description": "Motul 7100 10W-40 full synthetic, oil filter replaced",
+      "cost": 70.0,
+      "mileage": 31000,
+      "created_at": "2024-09-10 00:00:00"
+    },
+    {
+      "id": "r054",
+      "vehicle_id": "v005",
+      "date": "2024-10-05",
+      "category": "Tire Services",
+      "description": "Front and rear tire pressure adjusted, tires inspected for wear",
+      "cost": 30.0,
+      "mileage": 31000,
+      "created_at": "2024-10-05 00:00:00"
+    },
+    {
+      "id": "90b1079b-8afa-4f7b-a759-791ef931bdd1",
+      "vehicle_id": "v005",
+      "date": "2023-04-18",
+      "category": "Others",
+      "description": "Sprocket change",
+      "cost": 200.0,
+      "mileage": 2100,
+      "created_at": "2026-05-10 23:03:51.603000"
+    },
+    {
+      "id": "30408af4-2a2b-42a2-8888-af33ca5e6474",
+      "vehicle_id": "v005",
+      "date": "2024-05-08",
+      "category": "Others",
+      "description": "Sprocket Replacement",
+      "cost": 250.0,
+      "mileage": 2599,
+      "created_at": "2026-05-10 23:05:39.774435"
+    }
+  ]
+}
