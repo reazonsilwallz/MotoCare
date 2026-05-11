@@ -5,3 +5,9 @@ pages_/__pycache__/dashboard.cpython-311.pyc
 pages_/__pycache__/cost_comparison.cpython-311.pyc
 pages_/__pycache__/edit_delete.cpython-311.pyc
 pages_/__pycache__/about.cpython-311.pyc
+dist/pages_/__pycache__/select_vehicle.cpython-311.pyc
+dist/pages_/__pycache__/dashboard.cpython-311.pyc
+dist/pages_/__pycache__/edit_delete.cpython-311.pyc
+dist/pages_/__pycache__/cost_comparison.cpython-311.pyc
+dist/pages_/__pycache__/about.cpython-311.pyc
+dist/__pycache__/helpers.cpython-311.pyc
